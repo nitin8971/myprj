@@ -24,7 +24,7 @@ function searchAndScrape() {
 
 function displayResults(results) {
     const resultsDiv = document.getElementById('results');
-    resultsDiv.innerHTML = ''; // Clear previous results
+    resultsDiv.innerHTML = ''; 
 
     results.forEach((text, index) => {
         const paragraph = document.createElement('p');
