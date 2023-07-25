@@ -24,8 +24,8 @@ app.post('/search-and-scrape', async (req, res) => {
 });
 
 async function getSearchResults(query) {
-    const apiKey = 'AIzaSyDpUQxQMUyyJ4TY-VR58fMtRt9b9nOzdsk'; // Replace with your Custom Search API key
-    const cx = '7d594fa13e424201';   // Replace with your Custom Search Engine ID
+    const apiKey = 'AIzaSyDpUQxQMUyyJ4TY-VR58fMtRt9b9nOzdsk'; 
+    const cx = '7d594fa13e424201';   
     const url = `https://www.googleapis.com/customsearch/v1?q=${encodeURIComponent(query)}&key=${apiKey}&cx=${cx}&num=5`;
 
     try {
@@ -37,7 +37,7 @@ async function getSearchResults(query) {
 }
 
 async function scrapeURLs(searchResults) {
-    const scrapingBeeAPIKey = 'HJFMXMI6JC69V005TLVZY82GE3QQYGSSAQMW80E2S0CIPAHMN6NT50XI05KZPG9HN6L9QCR59BLUXT15'; // Replace with your ScrapingBee API key
+    const scrapingBeeAPIKey = 'HJFMXMI6JC69V005TLVZY82GE3QQYGSSAQMW80E2S0CIPAHMN6NT50XI05KZPG9HN6L9QCR59BLUXT15'; 
     const scrapedTexts = [];
 
     for (const url of searchResults) {
